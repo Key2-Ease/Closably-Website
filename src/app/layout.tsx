@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Closably - Trust, Momentum, Relief',
+  title: 'Close more deals, effortlessly',
   description: 'The high stakes brand refresh for B2B sales leaders.',
 };
 
