@@ -7,9 +7,9 @@ export function Footer() {
     return (
         <footer className="py-12 bg-[var(--color-brand-white)] border-t border-gray-100">
             <div className="max-w-[1200px] mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
                     {/* Left: Brand */}
-                    <div className="flex flex-col items-center md:items-start gap-4">
+                    <div className="flex flex-col items-center lg:items-start gap-4">
                         <img src="/closably-logo.png" alt="Closably" className="h-8 w-auto" />
                         <div className="text-sm font-medium text-[var(--color-brand-blue)]/50">
                             © {new Date().getFullYear()} Closably Inc.

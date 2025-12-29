@@ -30,14 +30,14 @@ export function BentoWorkflowSlider() {
     };
 
     return (
-        <div className="w-full py-20 flex items-center justify-center gap-6 md:gap-12 overflow-visible">
+        <div className="w-full py-10 md:py-20 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 overflow-visible">
 
             {/* 1. Meeting Booked */}
             <div className="relative group w-32 md:w-48 h-32 md:h-48 flex items-center justify-center z-10">
                 {/* Glow - Sibling Behind */}
                 <motion.div
                     animate={{ opacity: activeStep === 0 ? 1 : 0, scale: activeStep === 0 ? 1.2 : 0.9 }}
-                    className="absolute inset-0 bg-[#05B29B] blur-[60px] rounded-full -z-10 pointer-events-none"
+                    className="absolute inset-0 hidden md:block bg-[#05B29B] blur-[60px] rounded-full -z-10 pointer-events-none"
                 />
 
                 <motion.div
@@ -59,7 +59,7 @@ export function BentoWorkflowSlider() {
             </div>
 
             {/* Arrow 1 */}
-            <div className="text-gray-200">
+            <div className="text-gray-200 rotate-90 md:rotate-0">
                 <ChevronRight size={24} className="md:w-8 md:h-8" />
             </div>
 
@@ -68,7 +68,7 @@ export function BentoWorkflowSlider() {
                 {/* Glow - Sibling Behind */}
                 <motion.div
                     animate={{ opacity: activeStep === 1 ? 0.8 : 0, scale: activeStep === 1 ? 1.2 : 0.9 }}
-                    className="absolute inset-0 bg-[#05B29B] blur-[70px] rounded-full -z-10Pointer-events-none"
+                    className="absolute inset-0 hidden md:block bg-[#05B29B] blur-[70px] rounded-full -z-10 pointer-events-none"
                 />
 
                 <motion.div
@@ -95,7 +95,7 @@ export function BentoWorkflowSlider() {
             </div>
 
             {/* Arrow 2 */}
-            <div className="text-gray-200">
+            <div className="text-gray-200 rotate-90 md:rotate-0">
                 <ChevronRight size={24} className="md:w-8 md:h-8" />
             </div>
 
@@ -105,7 +105,7 @@ export function BentoWorkflowSlider() {
                 {/* Glow - Sibling Behind */}
                 <motion.div
                     animate={{ opacity: activeStep === 2 ? 1 : 0, scale: activeStep === 2 ? 1.2 : 0.9 }}
-                    className="absolute inset-0 bg-[#05B29B] blur-[60px] rounded-full -z-10 pointer-events-none"
+                    className="absolute inset-0 hidden md:block bg-[#05B29B] blur-[60px] rounded-full -z-10 pointer-events-none"
                 />
 
                 <motion.div

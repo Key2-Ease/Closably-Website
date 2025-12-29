@@ -27,22 +27,22 @@ const cases = [
 
 export function UseCases() {
     return (
-        <section className="py-24 bg-[var(--color-brand-white)]">
+        <section className="py-12 md:py-24 bg-[var(--color-brand-white)]">
             <div className="max-w-[1200px] mx-auto px-6">
-                <div className="text-center mb-16 flex flex-col items-center">
-                    <h2 className="text-[36px] md:text-[56px] font-bold text-[var(--color-brand-blue)] max-w-[800px] leading-tight">
+                <div className="text-center mb-4 md:mb-16 flex flex-col items-center">
+                    <h2 className="text-xl sm:text-2xl lg:text-[56px] font-bold text-[var(--color-brand-blue)] max-w-[800px] leading-tight px-4">
                         Designed for sales leaders who care about <span className="text-[var(--color-brand-green)]">speed and consistency</span>
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+                <div className="grid grid-cols-2 lg:grid-cols-2 gap-3 md:gap-8 mb-12">
                     {cases.map((c, i) => (
-                        <NeuCard key={i} className="p-8 group hover:-translate-y-1 transition-transform duration-300">
-                            <div className="w-12 h-12 rounded-xl bg-[#05B29B]/10 shadow-none flex items-center justify-center mb-6 text-[#05B29B] group-hover:bg-[var(--color-brand-green)] group-hover:text-white transition-colors duration-300">
-                                <c.icon size={24} />
+                        <NeuCard key={i} className="p-4 md:p-8 group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="w-8 h-8 md:w-12 md:h-12 rounded-xl bg-[#05B29B]/10 shadow-none flex items-center justify-center mb-3 md:mb-6 text-[#05B29B] group-hover:bg-[var(--color-brand-green)] group-hover:text-white transition-colors duration-300">
+                                <c.icon size={16} className="md:w-6 md:h-6" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[var(--color-brand-blue)] mb-3 group-hover:text-[var(--color-brand-green)] transition-colors duration-300">{c.role}</h3>
-                            <p className="text-[var(--color-brand-blue)]/60 leading-relaxed">
+                            <h3 className="text-sm md:text-2xl font-bold text-[var(--color-brand-blue)] mb-2 md:mb-3 group-hover:text-[var(--color-brand-green)] transition-colors duration-300">{c.role}</h3>
+                            <p className="text-xs md:text-base text-[var(--color-brand-blue)]/60 leading-relaxed line-clamp-3 md:line-clamp-none">
                                 {c.benefit}
                             </p>
                         </NeuCard>

@@ -49,42 +49,42 @@ const outputs = [
 
 export function OutputsGallery() {
     return (
-        <section id="outputs" className="py-24 bg-[var(--color-brand-white)]">
+        <section id="outputs" className="py-10 md:py-24 bg-[var(--color-brand-white)]">
             <div className="max-w-[1200px] mx-auto px-6">
-                <div className="text-center mb-16 flex flex-col items-center">
-                    <h2 className="text-[36px] md:text-[56px] font-bold text-[var(--color-brand-blue)] mb-6 max-w-[800px] leading-tight">
+                <div className="text-center mb-4 md:mb-16 flex flex-col items-center">
+                    <h2 className="text-xl sm:text-2xl md:text-[56px] font-bold text-[var(--color-brand-blue)] mb-6 max-w-[800px] leading-tight">
                         <span className="text-[var(--color-brand-green)]">Tangible outputs</span>, not generic summaries
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-12">
                     {outputs.map((item, i) => (
-                        <NeuCard key={i} className="group hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full">
+                        <NeuCard key={i} className="group hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full bg-white">
                             {/* Header: Increased Padding & Spacing */}
-                            <div className="p-8 border-b border-gray-100 flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-[#05B29B]/10 flex items-center justify-center text-[#05B29B] group-hover:bg-[var(--color-brand-green)] group-hover:text-white transition-colors duration-300 shrink-0">
-                                    <item.icon size={24} />
+                            <div className="p-4 md:p-8 border-b border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                <div className="w-8 h-8 md:w-12 md:h-12 rounded-xl bg-[#05B29B]/10 flex items-center justify-center text-[#05B29B] group-hover:bg-[var(--color-brand-green)] group-hover:text-white transition-colors duration-300 shrink-0">
+                                    <item.icon size={16} className="md:w-6 md:h-6" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-[var(--color-brand-blue)] group-hover:text-[var(--color-brand-green)] transition-colors duration-300 leading-tight">
+                                <h3 className="text-sm md:text-2xl font-bold text-[var(--color-brand-blue)] group-hover:text-[var(--color-brand-green)] transition-colors duration-300 leading-tight">
                                     {item.title}
                                 </h3>
                             </div>
 
                             {/* Content: Increased Padding & Typography */}
-                            <div className="p-8 flex-1 bg-gray-50/50">
+                            <div className="p-4 md:p-8 flex-1 bg-gray-50/50">
                                 <ul className="space-y-4">
                                     {item.items.map((str, idx) => {
                                         const isLast = idx === item.items.length - 1;
                                         if (isLast) {
                                             return (
-                                                <li key={idx} className="mt-6 p-4 rounded-xl bg-[var(--color-brand-green)]/10 border border-[var(--color-brand-green)]/20 text-[15px] font-medium text-[var(--color-brand-blue)] leading-relaxed">
+                                                <li key={idx} className="mt-4 md:mt-6 p-3 md:p-4 rounded-xl bg-[var(--color-brand-green)]/10 border border-[var(--color-brand-green)]/20 text-xs md:text-[15px] font-medium text-[var(--color-brand-blue)] leading-relaxed">
                                                     {str}
                                                 </li>
                                             );
                                         }
                                         return (
-                                            <li key={idx} className="flex items-start gap-3 text-[15px] leading-relaxed text-[var(--color-brand-blue)]/70 font-medium">
-                                                <span className="block mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-brand-green)]/60 shrink-0" />
+                                            <li key={idx} className={`${idx > 1 ? 'hidden md:flex' : 'flex'} items-start gap-2 md:gap-3 text-xs md:text-[15px] leading-relaxed text-[var(--color-brand-blue)]/70 font-medium`}>
+                                                <span className="block mt-1.5 md:mt-2 w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-[var(--color-brand-green)]/60 shrink-0" />
                                                 <span>{str}</span>
                                             </li>
                                         );

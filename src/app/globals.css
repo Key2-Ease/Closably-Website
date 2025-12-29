@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 @theme {
   --color-brand-white: #FBFCFB;
   --color-brand-blue: #161E2E;
@@ -34,6 +41,7 @@ body {
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,
@@ -44,7 +52,19 @@ h5,
 h6 {
   font-family: var(--font-jakarta), sans-serif;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.15;
+  }
 }
 
 p,

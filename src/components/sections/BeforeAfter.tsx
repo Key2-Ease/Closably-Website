@@ -25,14 +25,14 @@ export function BeforeAfter() {
         <section className="py-24 bg-[var(--color-brand-white)]">
             <div className="max-w-[1200px] mx-auto px-6">
                 <div className="text-center mb-16 flex flex-col items-center">
-                    <h2 className="text-[36px] md:text-[56px] font-bold text-[var(--color-brand-blue)] mb-4 max-w-[700px] leading-tight">
+                    <h2 className="text-xl sm:text-2xl md:text-[56px] font-bold text-[var(--color-brand-blue)] mb-4 max-w-[700px] leading-tight">
                         From reactive selling to <br className="hidden md:block" />
                         controlled <span className="text-[var(--color-brand-green)]">Momentum</span>
                     </h2>
                 </div>
 
                 {/* Split Layout: Left Column (Stack) | Right Column (Image) */}
-                <div className="grid lg:grid-cols-5 gap-8 mb-16 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8 md:mb-16 items-stretch">
 
                     {/* Left Column: Stacked Cards */}
                     <div className="lg:col-span-2 flex flex-col gap-6">
@@ -71,8 +71,8 @@ export function BeforeAfter() {
 
                     </div>
 
-                    {/* Right Column: Large Imagery */}
-                    <div className="lg:col-span-3">
+                    {/* Right Column: Large Imagery - Hidden on mobile */}
+                    <div className="hidden lg:block lg:col-span-3">
                         <NeuCard className="relative overflow-hidden h-full min-h-[500px] flex items-center justify-center group p-0 bg-gray-50">
                             <Image
                                 src="/growth_chart_3d.png"
