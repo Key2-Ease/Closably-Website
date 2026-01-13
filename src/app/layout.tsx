@@ -29,6 +29,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={clsx(jakarta.variable, inter.variable)}>
+      <head>
+        <script
+          id="vtag-ai-js"
+          async
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="1ixJbQU49XqcB2LAd"
+          data-version="062024"
+        />
+      </head>
+
       <body className="antialiased min-h-screen selection:bg-[#6DF5B9] selection:text-[#161E2E]">
         {children}
       </body>
